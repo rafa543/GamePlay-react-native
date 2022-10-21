@@ -1,15 +1,16 @@
 
-import { Image, TouchableOpacity, View, Text, TouchableHighlightProps } from 'react-native'
+import { Image, View, Text, TouchableHighlightProps } from 'react-native'
+import { RectButton, RectButtonProps } from 'react-native-gesture-handler'
 import DiscordImg from '../../assets/discord.png'
 import { styles } from './style'
 
-type Props = TouchableHighlightProps &{
+type Props = RectButtonProps &{
     title: string
 }
 
 export function ButtonIcon({title, ...rest} : Props) {
     return (
-        <TouchableOpacity style={styles.container} {...rest}>
+        <RectButton style={styles.container} {...rest}>
 
             <View style={styles.iconWrapper}>
                 <Image source={DiscordImg} style={styles.icon} />
@@ -17,7 +18,7 @@ export function ButtonIcon({title, ...rest} : Props) {
             <Text style={styles.title}>
                 {title}
             </Text>
-        </TouchableOpacity>
+        </RectButton>
 
     )
 }
