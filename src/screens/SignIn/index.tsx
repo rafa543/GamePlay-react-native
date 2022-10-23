@@ -6,8 +6,6 @@ import IlustrationImg from '../../assets/illustration.png'
 import { ButtonIcon } from '../../components/ButtonIcon'
 import { Background } from '../../components/Background'
 
-
-
 export function SignIn() {
     const navigation = useNavigation()
 
